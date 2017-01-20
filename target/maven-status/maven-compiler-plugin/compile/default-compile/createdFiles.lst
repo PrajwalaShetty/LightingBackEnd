@@ -1,0 +1,13 @@
+com\niit\lightingbackend\daoimpl\ProductDAOImpl.class
+com\niit\lightingbackend\model\Supplier.class
+com\niit\lightingbackend\daoimpl\SupplierDAOImpl.class
+com\niit\lightingbackend\config\ApplicationContextConfig.class
+com\niit\lightingbackend\dao\SupplierDAO.class
+com\niit\lightingbackend\model\Category.class
+com\niit\lightingbackend\dao\CategoryDAO.class
+com\niit\lightingbackend\dao\UserDAO.class
+com\niit\lightingbackend\model\User.class
+com\niit\lightingbackend\daoimpl\CategoryDAOImpl.class
+com\niit\lightingbackend\daoimpl\UserDAOImpl.class
+com\niit\lightingbackend\model\Product.class
+com\niit\lightingbackend\dao\ProductDAO.class
