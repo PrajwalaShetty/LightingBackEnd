@@ -9,9 +9,9 @@ public interface SupplierDAO {
 
 	public Supplier get(int supplierid);
 
-	public void save(Supplier reg);
+	public void save(Supplier supplier);
 
 	public void update(Supplier supplier);
 
-	public void delete(int supplierid);
+	public void delete(int id);
 }

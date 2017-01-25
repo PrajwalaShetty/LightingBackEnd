@@ -30,8 +30,8 @@ public class CategoryDAOImpl implements CategoryDAO {
 	}
 
 	@Transactional
-	public Category get(int categoryid) {
-		return (Category) sessionFactory.getCurrentSession().get(Category.class, categoryid);
+	public Category get(int id) {
+		return (Category) sessionFactory.getCurrentSession().get(Category.class, id);
 	}
 
 	@Transactional
@@ -45,9 +45,9 @@ public class CategoryDAOImpl implements CategoryDAO {
 	}
 
 	@Transactional
-	public void delete(int categoryid) {
+	public void delete(int id) {
 		Category CategoryToDelete = new Category();
-		CategoryToDelete.setCategoryid(categoryid);
+		CategoryToDelete.setCategoryid(id);
 		sessionFactory.getCurrentSession().delete(CategoryToDelete);
 		
 	}

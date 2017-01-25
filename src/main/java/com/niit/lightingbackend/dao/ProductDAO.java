@@ -1,14 +1,24 @@
 package com.niit.lightingbackend.dao;
 import java.util.List;
 
+import com.niit.lightingbackend.model.Category;
+import com.niit.lightingbackend.model.Product;
+import com.niit.lightingbackend.model.Supplier;
+
 public interface ProductDAO {
 
-	public List<ProductDAO> list();
+		public void save(Product product);
 
-	public ProductDAO get(String id);
+		public void update(Product product);
 
-	public boolean save(ProductDAO product);
+		public void delete(int id);
 
-	public boolean update(ProductDAO product);
+		public Product get(int productid);
+
+		public List<Product> list();
+		
+		public List<Category>listcategoryname();
+		
+		public List<Supplier>listsuppliername();
 
 }

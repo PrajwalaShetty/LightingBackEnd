@@ -1,6 +1,9 @@
 package com.niit.lightingbackend.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
@@ -9,7 +12,8 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table
 public class Supplier {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int supplierid;
 	private String suppliername;
 	private String supplieraddress;

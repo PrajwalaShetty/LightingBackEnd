@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.niit.lightingbackend.dao.SupplierDAO;
-
+import com.niit.lightingbackend.model.Category;
 import com.niit.lightingbackend.model.Supplier;
 
 @Repository("SupplierDAO")
@@ -33,18 +33,23 @@ public class SupplierDAOImpl implements SupplierDAO {
 	}
 
 	@Transactional
-	public void save(Supplier reg) {
+	public void save(Supplier supplier) {
+		sessionFactory.getCurrentSession().saveOrUpdate(supplier);
 		
 		
 	}
 
 	@Transactional
 	public void update(Supplier supplier) {
+		sessionFactory.getCurrentSession().update(supplier);
 		
 	}
 
 	@Transactional
-	public void delete(int supplierid) {
+	public void delete(int id) {
+	Supplier SupplierToDelete = new Supplier();
+		SupplierToDelete.setSupplierid(id);
+		sessionFactory.getCurrentSession().delete(SupplierToDelete);
 	
 		
 	}
