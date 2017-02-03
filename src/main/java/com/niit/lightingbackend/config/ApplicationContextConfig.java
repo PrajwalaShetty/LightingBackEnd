@@ -16,7 +16,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 //==========================
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
-@ComponentScan("com")
+@ComponentScan("com.niit.lightingbackend")
 @EnableTransactionManagement
 
 public class ApplicationContextConfig {
@@ -51,7 +51,7 @@ public class ApplicationContextConfig {
 		LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource);
 		sessionBuilder.addProperties(getHibernateProperties());
 		// added by KZN
-		sessionBuilder.scanPackages("com");
+		sessionBuilder.scanPackages("com.niit.lightingbackend");
 		return sessionBuilder.buildSessionFactory();
 	}
 
