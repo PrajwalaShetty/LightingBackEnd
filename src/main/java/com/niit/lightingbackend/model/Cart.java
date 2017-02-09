@@ -21,6 +21,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table
 public class Cart implements Serializable {
 
+	
+
 	/**
 	 * 
 	 */
@@ -33,7 +35,7 @@ public class Cart implements Serializable {
 	@OneToOne
 	@JoinColumn(name = "id")
 	@JsonIgnore
-	private UserCustomer user;
+	private UserCustomer usercustomer;
 
 	@Column
 	private int totalprice;
@@ -50,12 +52,20 @@ public class Cart implements Serializable {
 		this.cartId = cartId;
 	}
 
-	public UserCustomer getUserCustomer() {
-		return user;
+	public UserCustomer getUsercustomer() {
+		return usercustomer;
 	}
 
-	public void setUserCustomer(UserCustomer user) {
-		this.user = user;
+	public void setUsercustomer(UserCustomer usercustomer) {
+		this.usercustomer = usercustomer;
+	}
+
+	public List<CartItem> getCartItem() {
+		return cartItem;
+	}
+
+	public void setCartItem(List<CartItem> cartItem) {
+		this.cartItem = cartItem;
 	}
 
 	public int getTotalprice() {
@@ -73,9 +83,5 @@ public class Cart implements Serializable {
 	public void setCartItems(List<CartItem> cartItem) {
 		this.cartItem = cartItem;
 	}
-
-
-	
-
 
 }

@@ -12,11 +12,14 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Component
 @Entity
 @Table
 public class ShippingAddress implements Serializable {
+
 
 	/**
 	 * 
@@ -60,6 +63,7 @@ public class ShippingAddress implements Serializable {
 	private String zipcode;
 
 	@OneToOne(mappedBy = "shippingAddress")
+	@JsonIgnore
 	private UserCustomer user;
 
 	public int getShippingid() {
@@ -141,5 +145,6 @@ public class ShippingAddress implements Serializable {
 	public void setUser(UserCustomer user) {
 		this.user = user;
 	}
+
 
 }

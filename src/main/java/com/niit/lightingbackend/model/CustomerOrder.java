@@ -13,7 +13,8 @@ import javax.persistence.Table;
 @Entity
 @Table
 public class CustomerOrder implements Serializable{
-	
+
+
 	/**
 	 * 
 	 */

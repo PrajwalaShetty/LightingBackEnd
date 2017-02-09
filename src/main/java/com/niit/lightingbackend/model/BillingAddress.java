@@ -13,136 +13,136 @@ import javax.persistence.Table;
 
 import org.springframework.stereotype.Component;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Component
 @Entity
 @Table
 public class BillingAddress implements Serializable {
 
-		/**
-		 * 
-		 */
-		private static final long serialVersionUID = 1L;
+	/**
+	* 
+	*/
+	private static final long serialVersionUID = 1L;
 
-		@Id
-		@GeneratedValue(strategy = GenerationType.AUTO)
-		private int billingid;
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int billingid;
 
-		@Column
+	@Column
 
-		private String flatno;
+	private String flatno;
 
-		@Column
+	@Column
 
-		private String buildingname;
+	private String buildingname;
 
-		@Column
+	@Column
 
-		private String localityname;
+	private String localityname;
 
-		@Column
+	@Column
 
-		private String landmark;
+	private String landmark;
 
-		@Column
+	@Column
 
-		private String cityname;
+	private String cityname;
 
-		@Column
+	@Column
 
-		private String statename;
+	private String statename;
 
-		@Column
+	@Column
 
-		private String countryname;
+	private String countryname;
 
-		@Column
+	@Column
 
-		private String zipcode;
+	private String zipcode;
 
-		@OneToOne(mappedBy = "billingAddress", cascade = CascadeType.ALL)
-		private UserCustomer user;
+	@OneToOne(mappedBy = "billingAddress", cascade = CascadeType.ALL)
+	@JsonIgnore
+	private UserCustomer usercustomer;
 
-		public int getBillingid() {
-			return billingid;
-		}
-
-		public void setBillingid(int billingid) {
-			this.billingid = billingid;
-		}
-
-		public String getFlatno() {
-			return flatno;
-		}
-
-		public void setFlatno(String flatno) {
-			this.flatno = flatno;
-		}
-
-		public String getBuildingname() {
-			return buildingname;
-		}
-
-		public void setBuildingname(String buildingname) {
-			this.buildingname = buildingname;
-		}
-
-		public String getLocalityname() {
-			return localityname;
-		}
-
-		public void setLocalityname(String localityname) {
-			this.localityname = localityname;
-		}
-
-		public String getLandmark() {
-			return landmark;
-		}
-
-		public void setLandmark(String landmark) {
-			this.landmark = landmark;
-		}
-
-		public String getCityname() {
-			return cityname;
-		}
-
-		public void setCityname(String cityname) {
-			this.cityname = cityname;
-		}
-
-		public String getStatename() {
-			return statename;
-		}
-
-		public void setStatename(String statename) {
-			this.statename = statename;
-		}
-
-		public String getCountryname() {
-			return countryname;
-		}
-
-		public void setCountryname(String countryname) {
-			this.countryname = countryname;
-		}
-
-		public String getZipcode() {
-			return zipcode;
-		}
-
-		public void setZipcode(String zipcode) {
-			this.zipcode = zipcode;
-		}
-
-		public UserCustomer getUser() {
-			return user;
-		}
-
-		public void setUser(UserCustomer user) {
-			this.user = user;
-		}
-
+	public int getBillingid() {
+		return billingid;
 	}
 
+	public void setBillingid(int billingid) {
+		this.billingid = billingid;
+	}
 
+	public String getFlatno() {
+		return flatno;
+	}
+
+	public void setFlatno(String flatno) {
+		this.flatno = flatno;
+	}
+
+	public String getBuildingname() {
+		return buildingname;
+	}
+
+	public void setBuildingname(String buildingname) {
+		this.buildingname = buildingname;
+	}
+
+	public String getLocalityname() {
+		return localityname;
+	}
+
+	public void setLocalityname(String localityname) {
+		this.localityname = localityname;
+	}
+
+	public String getLandmark() {
+		return landmark;
+	}
+
+	public void setLandmark(String landmark) {
+		this.landmark = landmark;
+	}
+
+	public String getCityname() {
+		return cityname;
+	}
+
+	public void setCityname(String cityname) {
+		this.cityname = cityname;
+	}
+
+	public String getStatename() {
+		return statename;
+	}
+
+	public void setStatename(String statename) {
+		this.statename = statename;
+	}
+
+	public String getCountryname() {
+		return countryname;
+	}
+
+	public void setCountryname(String countryname) {
+		this.countryname = countryname;
+	}
+
+	public String getZipcode() {
+		return zipcode;
+	}
+
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+
+	public UserCustomer getUsercustomer() {
+		return usercustomer;
+	}
+
+	public void setUsercustomer(UserCustomer usercustomer) {
+		this.usercustomer = usercustomer;
+	}
+
+}

@@ -48,7 +48,7 @@ public class CartDAOImpl implements CartDAO {
 		session.close();
 		return cart;
 	}
-	@Transactional
+	@Override
 	public Cart validate(int cartId) throws IOException {
 		Cart cart = getCartByCartId(cartId);
 		System.out.println("emptycart1");
@@ -60,11 +60,11 @@ public class CartDAOImpl implements CartDAO {
 		return cart;
 	}
 
-	@Transactional
+	@Override
 	public void update(Cart cart) {
 		System.out.println("cart1");
 		int cartId = cart.getCartId();
-		System.out.println("carttot1");
+		System.out.println("cart2");
 		int grandTotal = customerorderdao.getCustomerOrderGrandTotal(cartId);
 		cart.setTotalprice(grandTotal);
 

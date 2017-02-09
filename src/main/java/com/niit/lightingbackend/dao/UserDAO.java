@@ -7,8 +7,6 @@ public interface UserDAO {
 
 	public List<UserCustomer> list();
 
-	public UserCustomer get(int id);
-
 	public UserCustomer validate(String id, String password);
 
 	public void save(UserCustomer user);

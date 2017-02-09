@@ -29,10 +29,10 @@ public class UserDAOImpl implements UserDAO {
 
 	}
 
-	@Transactional
-	public UserCustomer get(int id) {
-		return (UserCustomer) sessionFactory.getCurrentSession().get(UserCustomer.class, id);
-	}
+//	@Transactional
+//	public UserCustomer get(int id) {
+//		return (UserCustomer) sessionFactory.getCurrentSession().get(UserCustomer.class, id);
+//	}
 
 	@Transactional
 	public UserCustomer validate(String id, String password) {
@@ -53,7 +53,7 @@ public class UserDAOImpl implements UserDAO {
 		user.setRole("ROLE_USER");
 		Cart cart = new Cart();
 		user.setCart(cart);
-		cart.setUserCustomer(user);
+		cart.setUsercustomer(user);
 		// user.setRole("ROLE_ADMIN");
 		session.saveOrUpdate(user);
 	}
